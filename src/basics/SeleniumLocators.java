@@ -12,9 +12,17 @@ public class SeleniumLocators {
 		driver.manage().window().maximize();
 		driver.get("https://www.saucedemo.com/");
 		/**
+		 * Selenium uses various kind of locators
+		 * 
+		 * we are using Id, name, className, LinkText, PartialLinktext
+		 */
+		/**
 		 * Sendkeys is used to feed any value inside WebElement 
 		 */
 		driver.findElement(By.id("user-name")).sendKeys("standard_user");
+		driver.findElement(By.name("password")).sendKeys("secret_sauce");
+		
+		driver.findElement(By.className("submit-button")).click();
 		
 		
 
