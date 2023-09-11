@@ -16,8 +16,8 @@ public class LearnXpath {
 		 * 1) //tagname[@attribute='value'] or //*[@attribute='value']
 		 * 2) /parent//child[index]
 		 * 3) //a[contains(text(),'Text')]    use when you have text present
-		 * 4)  
-		 * 
+		 * 4)  //tagname[contains(@attribute,'substringvalue')]   -- using regular expression
+		 * 5)
 		 * 
 		 */
 
@@ -33,6 +33,10 @@ public class LearnXpath {
 	
 	WebElement qtyBox = driver.findElement(By.xpath("//input[contains(@id,'_EnteredQuantity')]"));
 	qtyBox.clear();
+	qtyBox.sendKeys("4");
+	
+	driver.quit();
+	
 	
 	}
 
