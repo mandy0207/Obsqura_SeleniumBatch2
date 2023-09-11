@@ -14,13 +14,19 @@ public class LearnXpath {
 		/**
 		 * Syntaxes of Xpaths
 		 * 1) //tagname[@attribute='value']
-		 * 2)
+		 * 2) /parent//child[index]
+		 * 3)
 		 * 
 		 * 
 		 */
 
-	WebElement loginBtn=	driver.findElement(By.xpath("//a[@class='ico-login']"));
+	WebElement loginBtn=driver.findElement(By.xpath("//a[@class='ico-login']"));
 	loginBtn.click();
+	driver.findElement(By.xpath("//input[@id='Email']")).sendKeys("obsqura24@gmail.com");
+	driver.findElement(By.xpath("//input[@name='Password']")).sendKeys("mypassword");
+	driver.findElement(By.xpath("//input[@value='Log in']")).click();
+	
+	driver.findElement(By.xpath("( //ul[@class='list'])[1]//li[4]//a")).click();
 	
 	}
 
