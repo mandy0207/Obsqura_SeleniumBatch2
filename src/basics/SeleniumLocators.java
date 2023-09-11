@@ -29,8 +29,8 @@ public class SeleniumLocators {
 		
 		driver.findElement(By.id("react-burger-menu-btn")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.linkText("About")).click();
 		
+		driver.findElement(By.linkText("About")).click();
 		System.out.println(driver.getTitle());
 		driver.navigate().back();
 		System.out.println(driver.getTitle());
