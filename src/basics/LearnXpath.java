@@ -13,9 +13,10 @@ public class LearnXpath {
 		driver.get("https://demowebshop.tricentis.com/");
 		/**
 		 * Syntaxes of Xpaths
-		 * 1) //tagname[@attribute='value']
+		 * 1) //tagname[@attribute='value'] or //*[@attribute='value']
 		 * 2) /parent//child[index]
-		 * 3)
+		 * 3) //a[contains(text(),'Text')]    use when you have text present
+		 * 4)  
 		 * 
 		 * 
 		 */
@@ -27,6 +28,11 @@ public class LearnXpath {
 	driver.findElement(By.xpath("//input[@value='Log in']")).click();
 	
 	driver.findElement(By.xpath("( //ul[@class='list'])[1]//li[4]//a")).click();
+	
+	driver.findElement(By.xpath("//a[contains(text(),'Blue Jeans')]")).click();
+	
+	WebElement qtyBox = driver.findElement(By.xpath("//input[contains(@id,'_EnteredQuantity')]"));
+	qtyBox.clear();
 	
 	}
 
