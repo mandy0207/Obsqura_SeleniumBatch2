@@ -42,10 +42,7 @@ public class LearnXpath {
 			productName.get(i).click();
 			break;
 		}
-	}
-	
-	
-	
+	}	
 	WebElement qtyBox = driver.findElement(By.xpath("//input[contains(@id,'_EnteredQuantity')]"));
 	qtyBox.clear();
 	qtyBox.sendKeys("4");
