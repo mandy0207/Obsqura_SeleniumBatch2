@@ -27,7 +27,32 @@ public class GeneralMethods {
 
 		int numberofLinks = driver.findElements(By.tagName("a")).size();
 		System.out.println(numberofLinks);
+		
+		/**
+		 * grab any attribute value of any webElement
+		 */
 
+		WebElement hotel=driver.findElement(By.id("booking_engine_hotels"));
+		System.out.println(hotel.getAttribute("title"));
+		System.out.println(hotel.getAttribute("href"));
+	
+		/**
+		 * ToolTip is nothing but having an attribute title and we just need to grab the
+		 * value of that title attribute. That will become ToolTip
+		 * 
+		 */
+		System.out.println("Tooltip:-"+hotel.getAttribute("title"));
+		/**
+		 * how to grab cssValue of any WebElement
+		 */
+		String colorCss=heading.getCssValue("color");
+		String fontWeightCss=heading.getCssValue("font-weight");
+		
+		System.out.println(colorCss);
+
+		System.out.println(fontWeightCss);
+		
+		driver.quit();
 	}
 
 }
