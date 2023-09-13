@@ -22,6 +22,8 @@ public class CheckBoxes_Radiobuttons {
 		driver.findElement(By.xpath("//*[contains(text(),'Radio Button')]")).click();
 		WebElement radioBtn = driver.findElement(By.xpath("//label[@for='yesRadio']"));
 		radioBtn.click();
+		
+		
 
 	}
 
