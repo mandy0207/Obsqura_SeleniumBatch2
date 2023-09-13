@@ -17,15 +17,16 @@ public class Is_Methods {
 		 */
 		WebElement checkBox = driver.findElement(By.xpath("//*[@id='gridCheck']"));
 		
-		boolean is_Selected1=checkBox.isSelected();
-		System.out.println("cheeckbox is selected :-"+is_Selected1);
+		boolean is_Selected=checkBox.isSelected();
+		System.out.println("cheeckbox is selected :-"+is_Selected);
 		checkBox.click();
-		boolean is_Selected2=checkBox.isSelected();
-		System.out.println("cheeckbox is selected :-"+is_Selected2);
+	    is_Selected=checkBox.isSelected();
+		System.out.println("cheeckbox is selected :-"+is_Selected);
 		
 		System.out.println("Is displayed: "+checkBox.isDisplayed());
 		
 		System.out.println("Is Enabled:"+checkBox.isEnabled());
+		driver.quit();
 		
 	}
 }

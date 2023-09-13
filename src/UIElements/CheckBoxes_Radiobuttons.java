@@ -17,11 +17,13 @@ public class CheckBoxes_Radiobuttons {
 		 * Click operation is used to check any checkbox and Radio Button
 		 */
 		WebElement checkBox=driver.findElement(By.xpath("//*[@class='rct-checkbox']"));
+		
 		checkBox.click();
 		
 		driver.findElement(By.xpath("//*[contains(text(),'Radio Button')]")).click();
 		WebElement radioBtn = driver.findElement(By.xpath("//label[@for='yesRadio']"));
 		radioBtn.click();
+		driver.quit();
 		
 		
 
