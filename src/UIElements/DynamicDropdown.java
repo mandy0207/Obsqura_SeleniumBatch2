@@ -6,18 +6,23 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class DynamicDropdown {
 
 	public static void main(String[] args) {
 		
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--start-maximized");		
+		WebDriver driver = new ChromeDriver(options);
+		
+
 		driver.get("https://selenium.obsqurazone.com/jquery-select.php");
 		
 		driver.findElement(By.xpath("//*[contains(@class,'-selection--multiple')]")).sendKeys("new");
 	    List<WebElement> states = driver.findElements(By.xpath("//*[@class='select2-results__options']/li"));
         System.out.println(states.size());
+        
       /**
        * older way of writing for loop
        */
