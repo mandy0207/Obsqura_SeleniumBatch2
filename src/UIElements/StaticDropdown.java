@@ -31,7 +31,9 @@ public class StaticDropdown {
 		Thread.sleep(2000);
 		staticDropdown.selectByIndex(1);
 		
+	
 		
+		driver.quit();
 		
 		
 	}
