@@ -19,6 +19,7 @@ public class StaticDropdown {
 		 *1) First we have to create object of select class
 		 *2) Pass the dropdown webElement as an argument for select class
 		 *3) Apply various methods to select element
+		 *   selectByVisibleText, selectByIndex, selectByVlaue
 		 */
 
 		Select staticDropdown = new Select(dropdown);
@@ -26,6 +27,11 @@ public class StaticDropdown {
 		
 		Thread.sleep(2000);
 		staticDropdown.selectByValue("Yellow");
+		
+		Thread.sleep(2000);
+		staticDropdown.selectByIndex(1);
+		
+		
 		
 		
 	}
