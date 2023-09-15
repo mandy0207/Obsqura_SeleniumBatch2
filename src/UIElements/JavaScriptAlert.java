@@ -23,8 +23,7 @@ public class JavaScriptAlert {
 		 * 3) Accept Alert
 		 * 4) Cancel or dismiss alert
 		 */
-		int c = 2+5;
-		System.out.println(c);
+		
 		Alert alert = driver.switchTo().alert();
 		Thread.sleep(2000);
 		String alertText = alert.getText();
@@ -35,8 +34,7 @@ public class JavaScriptAlert {
 		Thread.sleep(2000);
 		alert.dismiss();
 		
-		c=c+2;
-		System.out.println(c);
+		
 		driver.findElement(By.xpath("//*[@class='btn btn-danger']")).click();
 		Thread.sleep(2000);
 		alert.sendKeys("My name is Mandy");
