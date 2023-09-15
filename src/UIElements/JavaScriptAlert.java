@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class JavaScriptAlert {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -17,11 +17,32 @@ public class JavaScriptAlert {
 		
 		/**
 		 * In order to handle any javascript based alert we have to switch into Alert Mode
+		 * we can perform following actions on alert
+		 * 1) Get Text
+		 * 2) Send Text
+		 * 3) Accept Alert
+		 * 4) Cancel or dismiss alert
 		 */
-		
+		int c = 2+5;
+		System.out.println(c);
 		Alert alert = driver.switchTo().alert();
 		Thread.sleep(2000);
+		String alertText = alert.getText();
+		System.out.println(alertText);
 		alert.accept();
+		
+		driver.findElement(By.xpath("//*[@class='btn btn-warning']")).click();
+		Thread.sleep(2000);
+		alert.dismiss();
+		
+		c=c+2;
+		System.out.println(c);
+		driver.findElement(By.xpath("//*[@class='btn btn-danger']")).click();
+		Thread.sleep(2000);
+		alert.sendKeys("My name is Mandy");
+		alert.accept();
+		
+		driver.quit();
 
 	}
 
