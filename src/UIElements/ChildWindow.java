@@ -22,7 +22,7 @@ public class ChildWindow {
 		 * 
 		 */
 		/**
-		 * Here we are getting all window handles and using itertaor to grab window handles
+		 * Here we are getting all window handles and using iterator to grab window handles
 		 */
 	     Set<String> windows = driver.getWindowHandles();
 		Iterator<String> it = windows.iterator();
@@ -30,6 +30,7 @@ public class ChildWindow {
 		 * here we are iterating with iterator to grab windows
 		 */
 		String parentWindow = it.next();
+		System.out.println(parentWindow);
 		String childWindow = it.next();
 		
 		/**
@@ -46,6 +47,10 @@ public class ChildWindow {
 		 */
 		driver.switchTo().window(parentWindow);
 		System.out.println(driver.getTitle());
+		/**
+		 * return current window handle
+		 */
+		System.out.println(driver.getWindowHandle());
 		driver.quit();
 		
 
