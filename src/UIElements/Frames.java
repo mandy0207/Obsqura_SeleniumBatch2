@@ -14,6 +14,11 @@ public class Frames {
 
 		String headingText = driver.findElement(By.cssSelector(".example h3")).getText();
 		System.out.println(headingText);
+		/**
+		 * Way to grab all frames present on page
+		 */
+//		int numofFrames = driver.findElements(By.tagName("iframe")).size();
+//		System.out.println(numofFrames);
         /**
          * In order to interact elements inside frames 
          * we have to switch inside frame then only we can interact with elments inside frame
