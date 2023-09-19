@@ -59,6 +59,7 @@ public class MouseKeyboardActions {
          * context click is used to right click on any WebElement
          */
 		act.moveToElement(showMsg).contextClick().build().perform();
+		
 	}
 
 }
