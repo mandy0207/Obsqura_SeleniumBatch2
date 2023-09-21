@@ -10,12 +10,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class DynamicTable {
 
-	static int index;
+	
 	public static void main(String[] args) {
-        ChromeOptions opts = new ChromeOptions();
-        opts.setBinary("C:\\Users\\msingh\\Desktop\\Chrome 115x\\chrome-win64//Chrome.exe");
+       
         
-        WebDriver driver = new ChromeDriver(opts);
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://the-internet.herokuapp.com/tables");
       
