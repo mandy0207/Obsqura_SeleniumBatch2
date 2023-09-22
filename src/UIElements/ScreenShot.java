@@ -23,6 +23,8 @@ public class ScreenShot {
 		 * 2) use getScreenshot method to grab screenshot as a file
 		 * 3) Copy file to destination 
 		 */
+		
+	
 		TakesScreenshot scrshot=(TakesScreenshot)driver;
 		File srcfile = scrshot.getScreenshotAs(OutputType.FILE);
 		File destfile = new File(System.getProperty("user.dir")+"\\screenshot.png");
