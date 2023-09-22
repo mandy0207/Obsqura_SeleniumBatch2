@@ -27,7 +27,7 @@ public class ScreenShot {
 	
 		TakesScreenshot scrshot=(TakesScreenshot)driver;
 		File srcfile = scrshot.getScreenshotAs(OutputType.FILE);
-		File destfile = new File(System.getProperty("user.dir")+"\\screenshot.png");
+		File destfile = new File(System.getProperty("user.dir")+"\\Screenshot\\screenshot.png");
 		FileUtils.copyFile(srcfile, destfile);
 		
 		driver.quit();

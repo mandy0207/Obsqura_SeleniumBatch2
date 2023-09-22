@@ -29,6 +29,9 @@ public class LearningWaits {
 		
 		driver.findElement(By.xpath("//button[@id='downloadButton']")).click();
 		
+		/**
+		 * Explicit wait
+		 */
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	    By locator = By.xpath("//div[@class='progress-label']");
